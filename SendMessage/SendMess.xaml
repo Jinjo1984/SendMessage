@@ -1,0 +1,23 @@
+﻿<Window x:Class="SendMessage.SendMess"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SendMessage"
+        mc:Ignorable="d"
+        Title="SendMess" Height="450" Width="800">
+    <Grid>
+        <Button Margin="272,362,272,10" Content="Отправить сообщение" Click="Button_Click"/>
+        <DataGrid x:Name="dataStud" AutoGenerateColumns="False"  Margin="10,35,10,243"  FontFamily="Century Gothic" >
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Логин пользователя" Binding="{Binding userName }" Width="350"/>
+                <DataGridCheckBoxColumn Header="Группировка" Binding="{Binding CheckBoxColumn}" Width="350"/>
+
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+        <TextBox x:Name="TextSendMessage" TextWrapping="Wrap" Text="" Margin="306,217,306,121" Background="White"/>
+    </Grid>
+</Window>
